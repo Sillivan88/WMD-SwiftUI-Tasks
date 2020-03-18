@@ -54,20 +54,22 @@ struct TaskDetailView: View {
                     Text((self.task.isFinished) ? "Continue task" : "Finish task")
                         .foregroundColor((self.task.isFinished) ? .black : .green)
                 }
-                Button(action: {
-                    self.showTaskDeletionAlert.toggle()
-                }) {
-                    Text("Delete task")
-                        .foregroundColor(.red)
-                }
-                .alert(isPresented: $showTaskDeletionAlert, content: {
-                    let cancelButton = Alert.Button.cancel()
-                    let deleteButton = Alert.Button.destructive(Text("Delete")) {
-                        self.taskManager.deleteTask(self.task)
-                        self.presentationMode.wrappedValue.dismiss()
+                if shouldUpdateTaskManager {
+                    Button(action: {
+                        self.showTaskDeletionAlert.toggle()
+                    }) {
+                        Text("Delete task")
+                            .foregroundColor(.red)
                     }
-                    return Alert(title: Text("Delete task"), message: Text("Do you really want to delete this task?"), primaryButton: cancelButton, secondaryButton: deleteButton)
-                })
+                    .alert(isPresented: $showTaskDeletionAlert, content: {
+                        let cancelButton = Alert.Button.cancel()
+                        let deleteButton = Alert.Button.destructive(Text("Delete")) {
+                            self.taskManager.deleteTask(self.task)
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                        return Alert(title: Text("Delete task"), message: Text("Do you really want to delete this task?"), primaryButton: cancelButton, secondaryButton: deleteButton)
+                    })
+                }
             }
         }
         .navigationBarTitle(task.title)
