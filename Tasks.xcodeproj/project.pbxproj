@@ -13,6 +13,10 @@
 		E99550082420C04E00480BC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E99550072420C04E00480BC3 /* Assets.xcassets */; };
 		E995500B2420C04E00480BC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E995500A2420C04E00480BC3 /* Preview Assets.xcassets */; };
 		E995500E2420C04E00480BC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E995500C2420C04E00480BC3 /* LaunchScreen.storyboard */; };
+		E99550162420C07700480BC3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99550152420C07700480BC3 /* Task.swift */; };
+		E99550182420C0A400480BC3 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99550172420C0A400480BC3 /* TaskManager.swift */; };
+		E9B67FC72422087300EBE66D /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B67FC62422087300EBE66D /* TaskDetailView.swift */; };
+		E9B67FC92422190300EBE66D /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B67FC82422190300EBE66D /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E995500A2420C04E00480BC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E995500D2420C04E00480BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E995500F2420C04E00480BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E99550152420C07700480BC3 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		E99550172420C0A400480BC3 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		E9B67FC62422087300EBE66D /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		E9B67FC82422190300EBE66D /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				E99550012420C04D00480BC3 /* AppDelegate.swift */,
 				E99550032420C04D00480BC3 /* SceneDelegate.swift */,
 				E99550052420C04D00480BC3 /* ContentView.swift */,
+				E9B67FC62422087300EBE66D /* TaskDetailView.swift */,
+				E9B67FC82422190300EBE66D /* TextView.swift */,
+				E99550152420C07700480BC3 /* Task.swift */,
+				E99550172420C0A400480BC3 /* TaskManager.swift */,
 				E99550072420C04E00480BC3 /* Assets.xcassets */,
 				E995500C2420C04E00480BC3 /* LaunchScreen.storyboard */,
 				E995500F2420C04E00480BC3 /* Info.plist */,
@@ -146,7 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99550162420C07700480BC3 /* Task.swift in Sources */,
 				E99550022420C04D00480BC3 /* AppDelegate.swift in Sources */,
+				E9B67FC72422087300EBE66D /* TaskDetailView.swift in Sources */,
+				E9B67FC92422190300EBE66D /* TextView.swift in Sources */,
+				E99550182420C0A400480BC3 /* TaskManager.swift in Sources */,
 				E99550042420C04D00480BC3 /* SceneDelegate.swift in Sources */,
 				E99550062420C04D00480BC3 /* ContentView.swift in Sources */,
 			);
@@ -296,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.thomassillmann.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.thomassillmann.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
